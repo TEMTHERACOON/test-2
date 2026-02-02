@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+    <head> <title>COMIC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+     <style>
+
+         body{
+            background: url("bg.jpg");
+            color: #1f1b17;
+            font-family: "Gloock", serif;
+            transition: ease-out 0.5s;
+         }
+
+        div{
+            border: red 0px solid;
+        }
+
+        .main{
+            margin-top: 40%;
+        }
+
+        .bold{
+            top: 160px;
+            right: 16%;
+            position: absolute;
+            background-color: #0b52a3;
+            text-align: center;
+            border-radius: 100px;
+            padding: 5px;
+            color:#fff6ea;
+            font-weight: bold;
+            width: 25%;
+            font-size: 35px;
+            font-weight: 400;
+        }
+
+
+        .sub-title{
+            font-family: "Gloock", serif;
+            position: absolute;
+            left: 22%;
+            top: 140px;
+            font-size: 70px;
+            width: 350px;
+        }
+
+        .title{
+            font-family: "Gloock", serif;
+            position: absolute;
+            z-index: 2;
+            margin: -17% auto auto 14%;
+            width: 700px;
+            font-size: 100px;
+            text-align: center;
+        }
+
+
+        .container{
+            width: 915px;
+            display: grid;
+            grid-template-columns: 300px 550px;
+            grid-template-rows: repeat(3, 300px);
+            gap: 50px;
+            justify-self: center;
+        }
+
+        .item-2{
+            grid-row: span 3;
+        }
+
+            .item-1, .item-2, .item-3, .item-4{
+                background: linear-gradient(to right, #0b52a3,  #073c79);
+                  border: 5px solid #1f1b17;
+                  position: relative;
+                  overflow: hidden;
+                transition: transform 0.3s ease;
+                box-shadow: 10px 10px #042041;
+        }
+
+        .item-1:hover, .item-2:hover, .item-3:hover, .item-4:hover{
+            transform: scale(1.05);
+            animation-name: borderAnime;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            box-shadow: 15px 15px #912700;
+        }
+
+        @keyframes borderAnime {
+        0% { border: 8px solid   #e89906}
+        50% { border: 8px solid  #e85906}
+        100% { border: 8px solid  #e88606}
+        }
+
+
+            .item-1 img{
+            display: block;
+            margin: auto;
+            height: 100%;
+            width: 100%;
+        }
+
+         .item-2 img{
+            display: block;
+            margin: auto;
+            height: 100%;
+            width: 100%;
+        }
+
+         .item-3 img{
+            display: block;
+            margin: auto;
+            height: 100%;
+            width: 100%;
+        }
+
+        .item-4 img{
+            display: block;
+            margin: auto;
+            height: 100%;
+            width: 100%;
+        }
+
+        
+        .item-1 img:not(.filter),
+        .item-2 img:not(.filter),
+        .item-3 img:not(.filter),
+        .item-4 img:not(.filter){
+            position: relative;
+            z-index: 1
+        }
+
+        .date{
+            margin: 20px 70%;
+            font-weight: bold;
+            width: 25%;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 40px;
+        }
+        
+        .filter{
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.2;
+            z-index: 2;
+            pointer-events: none;
+            mix-blend-mode: hard-light;
+        }
+
+        .name{
+            top: 880px;
+            left: 25%;
+            width: 50%;
+            position: absolute;
+            z-index: 10;
+        }
+
+        .sticker{
+            position: absolute;
+            z-index: 999;
+            pointer-events: none;
+        }
+        
+
+        .sticker-1{
+        width: 10%;
+        translate: 50% -200px;
+        rotate: -15deg;
+        }
+
+        .sticker-2{
+        width: 15%;
+        right: 2%;
+        translate: 0 -270px;
+        rotate: 15deg;
+        }
+
+        .sticker-3{
+        width: 10%;
+        right: 2%;
+        translate: 0 -350px;
+         rotate: -10deg;
+        }
+
+        .sticker-4{
+        width: 6%;
+        translate: 10% -350px;
+        rotate: -5deg;
+        }
+
+         .sticker-5{
+        width: 5%;
+        right: 2%;
+        translate: 0 -80px;
+         rotate: -5deg;
+        }
+
+        .sticker-6{
+        width: 15%;
+        translate: -20% -145px;
+         rotate: 150deg;
+        }
+
+        .sticker-7{
+              width: 25%;
+                translate: 80% 230px;
+                rotate: 200deg;
+
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.3s ease;
+                transition: transform 0.3s ease-in-out;
+        }
+
+        .sticker-8{
+        width: 15%;
+        right: 5%;
+        translate: 0 40px;
+         rotate: -5deg;
+        }
+
+        .sticker-9{
+        width: 10%;
+        right: 50%;
+        translate: 0 550px;
+         rotate: 10deg;
+        }
+
+         .sticker-10{
+        width: 30%;
+        translate: 90% 40px;
+         rotate: -20deg;
+        }
+
+        .sticker-11{
+        width: 10%;
+        translate: 30% 550px;
+         rotate: 10deg;
+        }
+
+        .sticker-12{
+        width: 45%;
+        translate: -8% 660px;
+        rotate: 10deg;
+
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease;
+        }
+
+        .sticker-13{
+            width: 10%;
+            right: 5%;
+        }
+
+         .sticker-14{
+            translate: 0 -50px;
+            width: 5%;
+            rotate: -5deg;
+        }
+
+         .sticker-15{
+            width: 10%;
+            translate: 200%;
+            rotate: 20deg;
+        }
+
+        @media(min-width:1400px){
+               .bold{
+            width: 245px;
+            top:265px;
+            right: 28%;
+        }
+
+
+        .sub-title{
+            left: 31%;
+            top: 250px;
+        }
+
+        .title{
+            
+            margin: -17% auto auto 25%;
+        }
+
+
+            .sticker-10{
+                translate: 230%  200px;
+                width: 15%;
+            }
+
+            .sticker-12{
+        width: 30%;
+        translate: 45% 660px;
+        rotate: 10deg;
+
+        }
+        }
+
+    </style>
+    </head>
+    <body>
+    
+    <img src="heart-blue.png" class="sticker sticker-1">
+    <img src="heart-blue.png" class="sticker sticker-2">
+    <img src="sparkle-black.png" class="sticker sticker-3">
+    <img src="star2-black.png" class="sticker sticker-4">
+    <img src="star-blue.png" class="sticker sticker-5">
+    <img src="sparkle-black.png" class="sticker sticker-6">
+    <img src="arrow.png" class="sticker sticker-7">
+    <img src="glimmer-black.png" class="sticker sticker-8">
+    <img src="star-black.png" class="sticker sticker-9">
+    <img src="lycean.png" class="sticker sticker-10">
+    <img src="star2-white.png" class="sticker sticker-11">
+    <img src="circle.png" class="sticker sticker-12">
+
+
+    <section class="main">
+    
+    <div class="bold">JAVA CLICKS</div>
+    <div class="sub-title">FOREVER!</div>
+    <div class="title"> 
+         DIGITALIZED
+    </div>
+
+    <div class="container">
+        <div class="item-1" id="card-1"><img src="filter.jpg" class="filter"> <img src="2.png" id="change-1"></div>
+        <div class="item-2" id="card-2"><img src="filter.jpg" class="filter"> <img src="2.png" id="change-2"></div>
+        <div class="item-3" id="card-3"><img src="filter.jpg" class="filter"> <img src="2.png" id="change-3"></div>
+        <div class="item-4" id="card-4"><img src="filter.jpg" class="filter"> <img src="2.png" id="change-4"></div>
+    </div>
+        <div class="date">2026.01.31</div>
+    </section>
+
+    <img src="star2-black.png" class="sticker sticker-13">
+    <img src="star-blue.png" class="sticker sticker-14">
+    <img src="star-blue.png" class="sticker sticker-15">
+    </body>
+    <script>
+    const item1 = document.querySelector(".item-1");
+    const sticker7 = document.querySelector(".sticker-7");
+
+    item1.addEventListener("pointerenter", () => {
+        sticker7.style.visibility = "visible";
+        sticker7.style.opacity = "1";
+    });
+
+    item1.addEventListener("pointerleave", () => {
+        sticker7.style.visibility = "hidden";
+        sticker7.style.opacity = "0";
+    });
+
+    const item2 = document.querySelector(".item-2");
+    const sticker8 = document.querySelector(".sticker-8");
+    const sticker9 = document.querySelector(".sticker-9");
+    const sticker10 = document.querySelector(".sticker-10");
+
+    item2.addEventListener("pointerenter", () => {
+        sticker8.style.transform = "scale(1.2)";
+        sticker9.style.transform = "scale(1.2)";
+        sticker10.style.transform = "scale(1.2)";
+    });
+
+    item2.addEventListener("pointerleave", () => {
+        sticker8.style.transform = "scale(1)";
+        sticker9.style.transform = "scale(1)";
+        sticker10.style.transform = "scale(1)";
+    });
+
+    const item3 = document.querySelector(".item-3");
+    const sticker11 = document.querySelector(".sticker-11");
+
+    item3.addEventListener("pointerenter", () => {
+        sticker11.style.transform = "scale(1.2)";
+    });
+
+    item3.addEventListener("pointerleave", () => {
+        sticker11.style.transform = "scale(1)";
+    });
+
+    const item4 = document.querySelector(".item-4");
+    const sticker12 = document.querySelector(".sticker-12");
+
+    item4.addEventListener("pointerenter", () => {
+        sticker12.style.visibility = "visible";
+        sticker12.style.opacity = "1";
+    });
+
+    item4.addEventListener("pointerleave", () => {
+        sticker12.style.visibility = "hidden";
+        sticker12.style.opacity = "0";
+    });
+
+    const card1 = document.getElementById("card-1");
+    const img1 = document.getElementById("change-1");
+    const card2 = document.getElementById("card-2");
+    const img2 = document.getElementById("change-2");
+    const card3 = document.getElementById("card-3");
+    const img3 = document.getElementById("change-3");
+    const card4 = document.getElementById("card-4");
+    const img4 = document.getElementById("change-4");
+
+    let intervalId = null;
+
+    card1.addEventListener("pointerenter", () => {
+        if (intervalId) return;
+        intervalId = setInterval(() => {
+            img1.src = "3.png";
+            setTimeout(() => {
+                img1.src = "2.png";
+            }, 1000);
+        }, 2000);
+    });
+
+    card1.addEventListener("pointerleave", () => {
+        clearInterval(intervalId);
+        intervalId = null;
+        img1.src = "2.png";
+    });
+
+    card2.addEventListener("pointerenter", () => {
+        if (intervalId) return;
+        intervalId = setInterval(() => {
+            img2.src = "3.png";
+            setTimeout(() => {
+                img2.src = "2.png";
+            }, 1000);
+        }, 2000);
+    });
+
+    card2.addEventListener("pointerleave", () => {
+        clearInterval(intervalId);
+        intervalId = null;
+        img2.src = "2.png";
+    });
+
+    card3.addEventListener("pointerenter", () => {
+        if (intervalId) return;
+        intervalId = setInterval(() => {
+            img3.src = "3.png";
+            setTimeout(() => {
+                img3.src = "2.png";
+            }, 1000);
+        }, 2000);
+    });
+
+    card3.addEventListener("pointerleave", () => {
+        clearInterval(intervalId);
+        intervalId = null;
+        img3.src = "2.png";
+    });
+
+    card4.addEventListener("pointerenter", () => {
+        if (intervalId) return;
+        intervalId = setInterval(() => {
+            img4.src = "3.png";
+            setTimeout(() => {
+                img4.src = "2.png";
+            }, 1000);
+        }, 2000);
+    });
+
+    card4.addEventListener("pointerleave", () => {
+        clearInterval(intervalId);
+        intervalId = null;
+        img4.src = "2.png";
+    });
+</script>
+
+</html>

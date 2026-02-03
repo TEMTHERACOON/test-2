@@ -344,73 +344,74 @@
     <img src="star-blue.png" class="sticker sticker-15">
     </body>
     <script>
-    const item1 = document.querySelector(".item-1");
-    const sticker7 = document.querySelector(".sticker-7");
+        
+        const item1 = document.querySelector(".item-1");
+        const sticker7 = document.querySelector(".sticker-7");
 
-    item1.addEventListener("pointerenter", () => {
-        sticker7.style.visibility = "visible";
-        sticker7.style.opacity = "1";
-    });
+        item1.addEventListener("mouseenter", () => {
+            sticker7.style.visibility = "visible";
+            sticker7.style.opacity = "1";
+        });
 
-    item1.addEventListener("pointerleave", () => {
-        sticker7.style.visibility = "hidden";
-        sticker7.style.opacity = "0";
-    });
+        item1.addEventListener("mouseleave", () => {
+            sticker7.style.visibility = "hidden";
+            sticker7.style.opacity = "0";
+        });
 
-    const item2 = document.querySelector(".item-2");
-    const sticker8 = document.querySelector(".sticker-8");
-    const sticker9 = document.querySelector(".sticker-9");
-    const sticker10 = document.querySelector(".sticker-10");
+        const item2 = document.querySelector(".item-2");
+        const sticker8 = document.querySelector(".sticker-8");
+        const sticker9 = document.querySelector(".sticker-9");
+        const sticker10 = document.querySelector(".sticker-10");
 
-    item2.addEventListener("pointerenter", () => {
-        sticker8.style.transform = "scale(1.2)";
-        sticker9.style.transform = "scale(1.2)";
-        sticker10.style.transform = "scale(1.2)";
-    });
+        item2.addEventListener("mouseenter", () => {
+            sticker8.style.transform = "scale(1.2)";
+            sticker9.style.transform = "scale(1.2)";
+            sticker10.style.transform = "scale(1.2)";
+        });
 
-    item2.addEventListener("pointerleave", () => {
-        sticker8.style.transform = "scale(1)";
-        sticker9.style.transform = "scale(1)";
-        sticker10.style.transform = "scale(1)";
-    });
+        item2.addEventListener("mouseleave", () => {
+            sticker8.style.transform = "scale(1)";
+            sticker9.style.transform = "scale(1)";
+            sticker10.style.transform = "scale(1)";
 
-    const item3 = document.querySelector(".item-3");
-    const sticker11 = document.querySelector(".sticker-11");
+        });
 
-    item3.addEventListener("pointerenter", () => {
-        sticker11.style.transform = "scale(1.2)";
-    });
+        const item3 = document.querySelector(".item-3");
+        const sticker11 = document.querySelector(".sticker-11");
 
-    item3.addEventListener("pointerleave", () => {
-        sticker11.style.transform = "scale(1)";
-    });
+        item3.addEventListener("mouseenter", () =>{
+            sticker11.style.transform = "scale(1.2)";
+        });
+        item3.addEventListener("mouseleave", () =>{
+            sticker11.style.transform = "scale(1)";
+        });
 
-    const item4 = document.querySelector(".item-4");
-    const sticker12 = document.querySelector(".sticker-12");
 
-    item4.addEventListener("pointerenter", () => {
-        sticker12.style.visibility = "visible";
-        sticker12.style.opacity = "1";
-    });
+        const item4 = document.querySelector(".item-4");
+        const sticker12 = document.querySelector(".sticker-12");
 
-    item4.addEventListener("pointerleave", () => {
-        sticker12.style.visibility = "hidden";
-        sticker12.style.opacity = "0";
-    });
+        item4.addEventListener("mouseenter", () =>{
+            sticker12.style.visibility = "visible";
+            sticker12.style.opacity = "1";
+        });
+        item4.addEventListener("mouseleave", () =>{
+            sticker12.style.visibility = "hidden";
+            sticker12.style.opacity = "0";
+        });
 
-    const card1 = document.getElementById("card-1");
-    const img1 = document.getElementById("change-1");
-    const card2 = document.getElementById("card-2");
-    const img2 = document.getElementById("change-2");
-    const card3 = document.getElementById("card-3");
-    const img3 = document.getElementById("change-3");
-    const card4 = document.getElementById("card-4");
-    const img4 = document.getElementById("change-4");
+        const card1 = document.getElementById("card-1")
+        const img1 = document.getElementById("change-1")
+        const card2 = document.getElementById("card-2")
+        const img2 = document.getElementById("change-2")
+        const card3 = document.getElementById("card-3")
+        const img3 = document.getElementById("change-3")
+        const card4 = document.getElementById("card-4")
+        const img4 = document.getElementById("change-4")
 
-    let intervalId = null;
+        let intervalId = null;
 
-    card1.addEventListener("pointerenter", () => {
-        if (intervalId) return;
+         card1.addEventListener("mouseenter",() => {
+            if (intervalId) return;
         intervalId = setInterval(() => {
             img1.src = "3.png";
             setTimeout(() => {
@@ -419,14 +420,16 @@
         }, 2000);
     });
 
-    card1.addEventListener("pointerleave", () => {
-        clearInterval(intervalId);
-        intervalId = null;
-        img1.src = "2.png";
-    });
 
-    card2.addEventListener("pointerenter", () => {
-        if (intervalId) return;
+        card1.addEventListener("mouseleave", ()=> {
+            clearInterval(intervalId);
+            intervalId = null
+            img1.src = "2.png"
+        })
+
+
+        card2.addEventListener("mouseenter",() => {
+            if (intervalId) return;
         intervalId = setInterval(() => {
             img2.src = "3.png";
             setTimeout(() => {
@@ -435,14 +438,14 @@
         }, 2000);
     });
 
-    card2.addEventListener("pointerleave", () => {
-        clearInterval(intervalId);
-        intervalId = null;
-        img2.src = "2.png";
-    });
+        card2.addEventListener("", ()=> {
+            clearInterval(intervalId);
+            intervalId = null
+            img2.src = "2.png"
+        })
 
-    card3.addEventListener("pointerenter", () => {
-        if (intervalId) return;
+         card3.addEventListener("mouseenter",() => {
+            if (intervalId) return;
         intervalId = setInterval(() => {
             img3.src = "3.png";
             setTimeout(() => {
@@ -451,14 +454,15 @@
         }, 2000);
     });
 
-    card3.addEventListener("pointerleave", () => {
-        clearInterval(intervalId);
-        intervalId = null;
-        img3.src = "2.png";
-    });
 
-    card4.addEventListener("pointerenter", () => {
-        if (intervalId) return;
+        card3.addEventListener("mouseleave", ()=> {
+            clearInterval(intervalId);
+            intervalId = null
+            img3.src = "2.png"
+        })
+
+         card4.addEventListener("mouseenter",() => {
+            if (intervalId) return;
         intervalId = setInterval(() => {
             img4.src = "3.png";
             setTimeout(() => {
@@ -467,11 +471,15 @@
         }, 2000);
     });
 
-    card4.addEventListener("pointerleave", () => {
-        clearInterval(intervalId);
-        intervalId = null;
-        img4.src = "2.png";
-    });
-</script>
 
+        card4.addEventListener("mouseleave", ()=> {
+            clearInterval(intervalId);
+            intervalId = null
+            img4.src = "2.png"
+        })
+
+
+
+
+    </script>
 </html>
